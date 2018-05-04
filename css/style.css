@@ -8,11 +8,11 @@
 /* Fonts */
 @font-face{
     font-family: Berthold Akzidenz Grotesk;
-    src: url("./fonts/Berthold Akzidenz Grotesk Regular.otf");
+    src: url(./fonts/Berthold Akzidenz Grotesk Regular.otf);
 }
 @font-face{
     font-family: Berthold Akzidenz Grotest Super;
-    src: url("./fonts/Berthold Akzidenz Grotesk Super.otf");
+    src: url(./fonts/Berthold Akzidenz Grotesk Super.otf);
 }
 
 body{
