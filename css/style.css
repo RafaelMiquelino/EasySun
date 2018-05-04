@@ -1,0 +1,540 @@
+/* CSS Variables */
+:root {
+    --green: #69803D;   /* Background */
+    --yellow: #FFF100;  /* Background */
+    --dyellow: #FFD900; /* Text */   
+    --orange: #FDB913;  /* Logo */
+}
+/* Fonts */
+@font-face{
+    font-family: Berthold Akzidenz Grotesk;
+    src: url("/fonts/Berthold Akzidenz Grotesk Regular.otf");
+}
+@font-face{
+    font-family: Berthold Akzidenz Grotest Super;
+    src: url("/fonts/Berthold Akzidenz Grotesk Super.otf");
+}
+
+body{
+    margin: 0;
+    font-family: Berthold Akzidenz Grotesk;
+    overflow-x: hidden;
+    color:#333;
+}
+
+/* Header Section */
+
+.v-header{
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    background: url(/images/bg.jpeg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+.header-content{
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px !important;
+    text-align: center !important;
+}
+.header-content h1{
+    padding-top: 10px;
+}
+.header-content h2{
+    font-size: 35px;
+}
+
+/* Tag defaults */
+
+img{
+    margin: auto;
+    display: block;
+}
+h1{
+    font-size: 55px;
+    margin-bottom: 0;
+    font-family: Berthold Akzidenz Grotest Super;
+}
+p,div{
+    font-size: 30px;
+}
+/* Container */
+
+.container{
+    max-width: 960px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: left;
+    position: relative;
+}
+
+/* Sections */
+
+.section{
+    padding: 20px 0;
+}
+
+/* Section A */
+.section-a{
+    background-color: var(--green);
+}
+
+.section-a h1{
+    color: var(--dyellow);
+    text-align: left; 
+}
+.section-a p{
+    color: white;
+    font-size: 30px;
+}
+.a-box{
+    display: grid;
+    grid-template-areas:
+        'a-title a-title'
+        'a-text a-house';
+}
+.a-title{
+    grid-area: a-title;
+}
+.a-text{
+    grid-area: a-text;
+    margin: auto;
+}
+.a-house{
+    grid-area: a-house;
+    width: 400px;
+}
+
+.a-box2{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        'a-title2 a-title2'
+        'a-man a-text2';
+}
+.a-title2{
+    grid-area: a-title2;
+}
+.a-man{
+    grid-area: a-man;
+    width: 400px;
+    border-radius: 10%;
+}
+.a-text2{
+    grid-area: a-text2;
+}
+
+/* Section B */
+
+.section-b{
+    background-color: var(--dyellow);
+}
+.section-b h2{
+    font-size: 40px;
+    color: var(--green)
+
+}
+.b-box{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'b-title b-title'
+        'b-text b-diagram';
+}
+.b-title{
+    grid-area: b-title;
+}
+.b-text{
+    grid-area: b-text;
+}
+.b-diagram{
+    grid-area: b-diagram;
+    border-radius: 10%;
+}
+
+.b2-box{
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'b2-title b2-title b2-title b2-title'
+        'b2-img b2-name b2-text b2-text'
+        'b2-img2 b2-name2 b2-text2 b2-text2'
+        '. . . .'
+        'b2-img3 b2-text3 b2-text3 b2-img4';
+}
+.b2-box h1{
+    margin: auto;
+}
+.b2-title{
+    grid-area: b2-title;
+}    
+.b2-img{
+    grid-area: b2-img;
+}
+.b2-name{
+    grid-area: b2-name;
+}
+.b2-text{
+    grid-area: b2-text;
+    margin-left: 10%;
+}
+.b2-img2{
+    grid-area: b2-img2;
+}
+.b2-name2{
+    grid-area: b2-name2;
+}
+.b2-text2{
+    grid-area: b2-text2;
+    margin-left: 10%;
+}
+.b2-img3{
+    grid-area: b2-img3;
+}
+.b2-img4{
+    grid-area: b2-img4;
+}
+.b2-text3{
+    grid-area: b2-text3;
+}
+.b2-text3{
+    text-align: center;
+}
+
+/* Section C */
+.section-c{
+    background-color: white;
+    position: relative;
+    padding-top: 0;
+    z-index: 1;
+}
+
+.c-box{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        'c-title c-title'
+        'c-text c-img';
+}
+.c-title{
+    grid-area: c-title
+}
+.c-text{
+    grid-area: c-text;
+}
+.c-img{
+    grid-area: c-img;
+}
+
+/* Section D */
+
+.section-d{
+    background-color: white;
+    padding-bottom: 0;
+}
+.d-box{
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    'd-title d-title'
+    'd-text d-text'
+    'd-dam d-stats';
+}
+.d-title{
+    grid-area: d-title;
+    font-size: 54px;
+    text-align: center;
+}
+.d-text{
+    grid-area: d-text;
+    font-size: 29px;
+    margin-bottom: 30px;
+}
+.d-dam{
+    grid-area: d-dam;
+}
+.d-stats{
+    grid-area: d-stats;
+    margin-top: 0;
+}
+.d-sol{
+    margin-top: 50px;
+}
+
+/* Section E */
+
+.section-e{
+    background-color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+.section-e h1,h2,h3,p{
+    margin: 0;
+}
+.section-e p{
+    text-align: left;
+}
+.e-box{
+    padding-top:300px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        'e-text2 e-text1'
+        'e-text2 e-text3';
+}
+.e-text1{
+    grid-area: e-text1;
+}
+.e-text2{
+    grid-area: e-text2;
+}
+.e-text2 h1{
+    font-size: 35px;
+}
+.e-text3{
+    grid-area: e-text3;
+    text-align: right;
+}
+.e-text3 h1{
+    font-size: 35px;
+}
+.e-clouds{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+
+/* Section F */
+
+.section-f{
+    background-color: var(--green);
+}
+.section-f h1{
+    color: var(--dyellow);
+}
+.section-f p{
+    color: white;
+}
+.f-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'f-title f-title f-title'
+        'f-text f-text f-bulb';
+}
+.f-title{
+    grid-area: f-title;
+}
+.f-text{
+    margin-top: 40px;
+    font-size: 35px;
+    grid-area: f-text;
+}
+.f-bulb{
+    grid-area: f-bulb;
+    width:320px;
+}
+
+/* Section G */
+
+.section-g{
+    color: var(--green);
+    /* background-color: var(--green); */
+    border-top: var(--green) 3px dashed;
+}
+
+.section-g h1{
+    text-align: center;
+    margin-top: 0;
+}
+
+input[type=text], input[type=email], textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Berthold Akzidenz Grotesk;
+}
+textarea{
+    height: 150px;
+}
+
+button{
+    width: 100%;
+    background-color: var(--green);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    display: block;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Berthold Akzidenz Grotesk Super;
+    font-size: 20px;
+    margin: auto; 
+}
+
+/* Footer */
+
+footer{
+    font-family: Berthold Akzidenz Grotesk;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.5;
+}
+footer a{
+    text-decoration: none;
+    color: var(--green);
+    font-size: 50px;
+}
+
+.footer-link{
+    font-family: Berthold Akzidenz Grotest Super;
+}
+.footer-link2{
+    font-family: Berthold Akzidenz Grotest Super;
+    color: var(--orange);
+}
+.footer-email{
+    letter-spacing: 5px;
+}
+
+/* Media Queries */
+
+@media(max-width:925px){
+    .d-box{
+        margin-top: 30px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas:
+        'd-title'
+        'd-text'
+        'd-dam'
+        'd-stats';
+    }
+    .c-topimg, .e-clouds, .e-hill, .d-sol, .d-dam, .d-stats{
+        width: 80vw;
+    }
+
+    footer a{
+        font-size: 5vw;
+    }
+    .footer-email{
+        letter-spacing: normal; 
+    }
+}
+
+@media(max-width:800px){
+    .a-box{
+        grid-template-areas:
+            'a-title'
+            'a-text'
+            'a-house';
+    }
+    .a-box2{
+        grid-template-areas:
+            'a-title2'
+            'a-text2'
+            'a-man';
+    }
+    .b-box{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'b-title'
+            'b-text'
+            'b-diagram';
+    }
+    .b2-box{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'b2-title'
+            'b2-name'
+            'b2-text'
+            'b2-name2'
+            'b2-text2'
+            '.'
+            'b2-text3';
+    }
+    .b2-img, .b2-img2, .b2-img3, .b2-img4{
+        display: none;
+    }
+    .c-box{
+        padding-top:12vh;
+        grid-template-areas:
+            'c-title'
+            'c-text'
+            'c-img';
+    }
+    .e-box{
+        padding-top: 10vh;
+        grid-template-areas:
+            'e-text1'
+            'e-text2'
+            'e-text2' 
+            'e-text3';
+    }
+    
+    .f-box{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'f-title'
+            'f-text'
+            'f-bulb';
+    }
+
+    .c-img, .a-house, .f-bulb, .b-diagram, .a-man, .flogo{
+        width: 50vw !important;
+    }
+}
+
+@media(max-width:600px){
+    h1{
+        font-size: 9vw !important;
+    }
+    h2{
+        font-size: 8vw !important;
+    }
+    .header-content h2{
+        font-size: 5vw !important;
+    }
+    p,div{
+        font-size: 5vw !important;
+    }
+    .logo{
+        width: 80vw !important;
+    }
+    .header-content{
+        margin-top: 5vh !important;
+    }
+    .header-content h1{
+        margin-top: 15vh;
+    }
+
+}
+
+
+
+
+
+
+
+
+
